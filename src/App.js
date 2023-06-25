@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Papa from 'papaparse';
+import CSVExport from './components/CSVExport';
+import CSVImport from './components/CSVImport';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+  // const [data, setData] = useState([]);
+
+  // const handleFileUpload = (e) => {
+  //   const file = e.target.files[0];
+  //   Papa.parse(file, {
+  //     header: true,
+  //     complete: (results) => {
+  //       setData(results.data);
+  //     }
+  //   })
+  // }
+
+  return (<>
+
+    <CSVExport />
+
+    <CSVImport />
+  </>
+  )
 }
 
-export default App;
+export default App
